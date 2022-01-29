@@ -1,37 +1,35 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: 0;
     font-family: sans-serif;
 }
 
-
-/* PRZYKŁAD PIERWSZY */
-/* body{
+body {
     background-color: #eee;
 }
-.panel{
+
+.panel {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-
 }
 
-.panel__name{
+.panel__name {
     font-size: 4rem;
     text-transform: uppercase;
     color: red;
 }
 
-.panel__text{
+.panel__text {
     text-align: center;
     padding: 10vh 0;
     line-height: 2rem;
 }
 
-.panel__btn{
+.panel__btn {
     background-color: red;
     border: none;
     padding: 3vh 5vh;
@@ -40,84 +38,41 @@
     cursor: pointer;
 }
 
-input{
-    background-color: white;
-    padding: 2vh;
-    text-transform: uppercase;
-    
-} */
-
-body{
-    background-color: #eee;
-}
-.panel{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-
-}
-.panel__name{
-    font-size: 4rem;
-    text-transform: uppercase;
-    color: red;
-}
-
-.panel__text{
-    text-align: center;
-    padding: 10vh 0;
-    line-height: 2rem;
-}
-
-.panel__btn{
-    background-color: red;
-    border: none;
-    padding: 3vh 5vh;
-    text-transform: uppercase;
-    letter-spacing: 0.4rem;
-    cursor: pointer;
-}
-
-.panel__form{
+.panel__form {
     display: none;
-    /* display: flex; */
-    
 }
 
-.form__container{
+.form__container {
     display: flex;
     flex-direction: column;
-    padding:2vh;
+    padding: 2vh;
 }
-.panel__form.show{
+
+.panel__form.show {
     display: flex;
 }
 
-.form__input{
-    padding:2vh;
+.form__input {
+    padding: 2vh;
 }
 
-.form__label{
+.form__label {
     padding-bottom: 1vh;
 }
 
-.newItem{
+.newItem {
     display: none;
-    /* width: 200px;
-    height: 30px; */
-    
-    /* background-color: red; */
 }
-.newItem input{
+
+.newItem input {
     padding: 2vh;
 }
 
-.show{
+.show {
     display: block;
 }
 
-.panel__open{
+.panel__open {
     display: block;
     background-color: red;
     border: none;
@@ -127,8 +82,7 @@ body{
     cursor: pointer;
 }
 
-.newItem input{
-    
+.newItem input {
     background-color: red;
     border: none;
     padding: 3vh 5vh;
@@ -137,8 +91,6 @@ body{
     cursor: pointer;
 }
 
-.panel__end{
+.panel__end {
     display: none;
 }
-
-
