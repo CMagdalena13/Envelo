@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Envelo</title>
+</head>
+<body>
+
+    <!-- PRZYKŁAD PIERWSZY -->
+
+    <!-- <div class="panel">
+        <h1 class="panel__name">envelo</h1>
+        <p class="panel__text">Możesz mieć swoją przesyłkę w kilkanaście sekund. <br> Rozpoczniej klikając w przycisk</p>
+        
+        <button class="panel__btn">odbierz paczkę</button>
+    </div> -->
+
+
+    <!--  PRZYKŁAD DRUGI -->
+
+
+    <div class="panel">
+        <h1 class="panel__name">envelo</h1>
+        <p class="panel__text">Możesz mieć swoją przesyłkę w kilkanaście sekund. <br> Rozpoczniej klikając w przycisk</p>
+        <div id="error"></div>
+        <form class="panel__form form">
+            <div class="form__container">
+                
+                <label class="form__label" for="number"  >Numer telefonu:</label>
+                <input class="form__input" type="text" id="numer" autocomplete="off" maxlength="9" required>
+            </div>
+            <div class="form__container">
+                <label class="form__label" for="number">Kod odbioru:</label>
+                <input class="form__input" type="text" id="kod" autocomplete="off" maxlength="4" required>
+            </div>
+            
+        </form>
+        <button  class="panel__btn">Obierz przesyłkę</button>
+        <button  class="panel__open">Otórz skrytkę</button>
+
+        
+        <div class="newItem">
+            <input class="newItem__next"type="submit" value="Obierz kolejną paczkę">
+            <input class="newItem__end" type="submit" value="To wszystko na dziś">
+            
+        </div>
+        
+       <div class="panel__end">
+           dziękujemy za skorzystanie z naszych usług
+       </div>
+        
+        
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+
+</body>
+</html>
