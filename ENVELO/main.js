@@ -36,7 +36,7 @@ openBtn.addEventListener('click', (e) => {
         clearInterval(interval);
         thx.innerHTML = `Zrobiłeś to w czasie ${time} sekund! <br> Czy możemy zrobić dla Ciebie coś jeszcze?`;
     } else {
-        errorElement.innerHTML = 'wprowadź poprawne dane'
+        errorElement.innerHTML = 'wprowadź poprawne dane!'
         number.value = ''
         kod.value = ''
     }

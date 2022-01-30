@@ -67,6 +67,10 @@ button{
     cursor: pointer;
 }
 
+.error{
+    color: var(--btn--color);
+}
+
 .newItem.show{
     display: flex;
     flex-direction: column;
