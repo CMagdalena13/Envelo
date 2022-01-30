@@ -1,5 +1,5 @@
-const btn = document.querySelector("button");
-const open = document.querySelector(".panel__open");
+const pickupBtn = document.getElementById("pickup-btn");
+const openBtn = document.getElementById("open-btn");
 const form = document.querySelector("form");
 const number = document.getElementById("numer");
 const kod = document.getElementById("kod");
@@ -8,46 +8,59 @@ const newItem = document.querySelector('.newItem');
 const btnEnd = document.querySelector('.newItem__end');
 const btnNext = document.querySelector('.newItem__next');
 const panelEnd = document.querySelector('.panel__end');
+const thx = document.getElementById('thx');
+const gigaChadBtn = document.getElementById('panel__gigachad-end');
 
+let time = 0
+let interval;
 
-
-open.style.cssText = "display:none";
-
-btn.addEventListener('click', (e) => {
+pickupBtn.addEventListener('click', (e) => {
     e.preventDefault()
-    form.classList.add('show');
-    btn.parentNode.replaceChild(open, btn)
-    open.style.cssText = "display:block"
+    form.classList.replace('hide', 'show');
+    openBtn.classList.replace('hide', 'show');
+    pickupBtn.classList.replace('show', 'hide');
+    time = 0;
+    interval = setInterval(increment, 1000);
 })
 
-open.addEventListener('click', (e) => {
+openBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    if (number.value === "12" && kod.value === "12") {
+    if (validate(number.value, kod.value)) {
         errorElement.innerHTML = '';
         number.value = ''
         kod.value = ''
-        form.parentNode.replaceChild(newItem, form);
-        newItem.classList.add("show");
-        open.style.cssText = "display:none;"
+        form.classList.replace('show','hide');
+        newItem.classList.replace('hide','show');
+        openBtn.classList.replace("show", "hide");
     } else {
         errorElement.innerHTML = 'wprowadź poprawne dane'
         number.value = ''
         kod.value = ''
     }
-
-
 })
 
-
 btnEnd.addEventListener('click', (e) => {
-    panelEnd.style.cssText = "display:block";
-    newItem.style.cssText = "display:none";
-
+    panelEnd.classList.replace('hide','show');
+    thx.classList.replace('hide','show');
+    newItem.classList.replace('show','hide');
+    gigaChadBtn.classList.replace('hide', 'show');
+    clearInterval(interval);
+    thx.innerHTML = `Dziękujemy za skorzystanie z naszych usług! &nbsp;&nbsp;&nbsp;&nbsp;Odebrałeś przesyłkę w ${time} sekund.`;
 })
 
 btnNext.addEventListener('click', (e) => {
-    newItem.parentNode.replaceChild(form, newItem);
-    open.style.cssText = "display:block;"
-
-
+    openBtn.classList.replace('hide', 'show');
+    form.classList.replace('hide','show');
+    newItem.classList.replace('show','hide');
 })
+
+gigaChadBtn.addEventListener('click', (e)=>{
+    pickupBtn.classList.replace('hide','show');
+    form.classList.replace('show', 'hide');
+    gigaChadBtn.classList.replace('show','hide');
+    panelEnd.classList.replace('show','hide');
+})
+
+function increment() {
+    time++;
+}

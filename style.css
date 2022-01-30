@@ -29,27 +29,14 @@ body {
     line-height: 2rem;
 }
 
-.panel__btn {
-    background-color: red;
-    border: none;
-    padding: 3vh 5vh;
-    text-transform: uppercase;
-    letter-spacing: 0.4rem;
-    cursor: pointer;
-}
-
-.panel__form {
-    display: none;
+.form.show{
+    display: flex;
 }
 
 .form__container {
     display: flex;
     flex-direction: column;
     padding: 2vh;
-}
-
-.panel__form.show {
-    display: flex;
 }
 
 .form__input {
@@ -72,25 +59,15 @@ body {
     display: block;
 }
 
-.panel__open {
-    display: block;
-    background-color: red;
-    border: none;
-    padding: 3vh 5vh;
-    text-transform: uppercase;
-    letter-spacing: 0.4rem;
-    cursor: pointer;
+.hide {
+    display: none;
 }
 
-.newItem input {
+.btn-red{
     background-color: red;
     border: none;
     padding: 3vh 5vh;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     cursor: pointer;
-}
-
-.panel__end {
-    display: none;
 }

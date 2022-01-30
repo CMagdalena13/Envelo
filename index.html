@@ -9,13 +9,11 @@
 </head>
 
 <body>
-
     <div class="panel">
         <h1 class="panel__name">envelo</h1>
-        <p class="panel__text">Możesz mieć swoją przesyłkę w kilkanaście sekund. <br> Rozpoczniej klikając w przycisk
-        </p>
+        <p class="panel__text">Możesz mieć swoją przesyłkę w kilkanaście sekund. <br> Rozpoczniej klikając w przycisk</p>
         <div id="error"></div>
-        <form class="panel__form form">
+        <form class="hide form">
             <div class="form__container">
                 <label class="form__label" for="number">Numer telefonu:</label>
                 <input class="form__input" type="text" id="numer" autocomplete="off" maxlength="9" required>
@@ -25,17 +23,18 @@
                 <input class="form__input" type="text" id="kod" autocomplete="off" maxlength="4" required>
             </div>
         </form>
-        <button class="panel__btn">Odbierz przesyłkę</button>
-        <button class="panel__open">Otwórz skrytkę</button>
-        <div class="newItem">
-            <input class="newItem__next" type="submit" value="Odbierz kolejną paczkę">
-            <input class="newItem__end" type="submit" value="To wszystko na dziś">
+        <button id="pickup-btn"class="btn-red show">Odbierz przesyłkę</button>
+        <button class=" btn-red hide" id="open-btn" >Otwórz skrytkę</button>
+        <div class="newItem hide">
+            <input class="newItem__next btn-red" type="submit" value="Odbierz kolejną paczkę">
+            <input class="newItem__end btn-red" type="submit" value="To wszystko na dziś">
         </div>
-        <div class="panel__end">
-            Dziękujemy za skorzystanie z naszych usług!
+        <div class=" hide panel__end ">
+            <div class="hide "id="thx"></div>  
+            <button class="hide btn-red"id="panel__gigachad-end">Zakończ na dziś</button>
         </div>
     </div>
     <script src="main.js"></script>
-
+    <script src="api.service.js"></script>
 </body>
 </html>
