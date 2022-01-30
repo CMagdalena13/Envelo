@@ -11,7 +11,7 @@
 <body>
     <div class="panel">
         <h1 class="panel__name">envelo</h1>
-        <p class="panel__text">Możesz mieć swoją przesyłkę w kilkanaście sekund. <br> Rozpoczniej klikając w przycisk</p>
+        <p class="panel__text">Możesz mieć swoją przesyłkę w kilkanaście sekund. <br> Rozpocznij klikając w przycisk</p>
         <div id="error"></div>
         <form class="hide form">
             <div class="form__container">
@@ -25,14 +25,14 @@
         </form>
         <button id="pickup-btn"class="btn-red show">Odbierz przesyłkę</button>
         <button class=" btn-red hide" id="open-btn" >Otwórz skrytkę</button>
+        <div class=" hide panel__end ">
+            <div class="hide "id="thx"></div>  
+        </div>
         <div class="newItem hide">
             <input class="newItem__next btn-red" type="submit" value="Odbierz kolejną paczkę">
             <input class="newItem__end btn-red" type="submit" value="To wszystko na dziś">
         </div>
-        <div class=" hide panel__end ">
-            <div class="hide "id="thx"></div>  
-            <button class="hide btn-red"id="panel__gigachad-end">Zakończ na dziś</button>
-        </div>
+        
     </div>
     <script src="main.js"></script>
     <script src="api.service.js"></script>

@@ -6,7 +6,9 @@
 }
 
 body {
-    background-color: #eee;
+    background-color: #F2F2F2;
+    width: 100vw;
+    height: 100vh;
 }
 
 .panel {
@@ -20,7 +22,7 @@ body {
 .panel__name {
     font-size: 4rem;
     text-transform: uppercase;
-    color: red;
+    color: #d52b1e;
 }
 
 .panel__text {
@@ -47,6 +49,13 @@ body {
     padding-bottom: 1vh;
 }
 
+.panel__end.show{
+    margin: 0 auto;
+    /* justify-content: center; */
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
 .newItem {
     display: none;
 }
@@ -64,10 +73,20 @@ body {
 }
 
 .btn-red{
-    background-color: red;
+    background-color: #d52b1e;
     border: none;
     padding: 3vh 5vh;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     cursor: pointer;
 }
+.panel__end{
+    display: flex;
+    flex-direction: column;
+}
+
+/* .thx{
+    text-align: center;
+    padding-bottom: 5vh;
+} */
+

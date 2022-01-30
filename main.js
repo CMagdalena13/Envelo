@@ -9,16 +9,15 @@ const btnEnd = document.querySelector('.newItem__end');
 const btnNext = document.querySelector('.newItem__next');
 const panelEnd = document.querySelector('.panel__end');
 const thx = document.getElementById('thx');
-const gigaChadBtn = document.getElementById('panel__gigachad-end');
 
 let time = 0
 let interval;
 
 pickupBtn.addEventListener('click', (e) => {
     e.preventDefault()
-    form.classList.replace('hide', 'show');
-    openBtn.classList.replace('hide', 'show');
-    pickupBtn.classList.replace('show', 'hide');
+    showEl(form);
+    showEl(openBtn);
+    hideEl(pickupBtn);
     time = 0;
     interval = setInterval(increment, 1000);
 })
@@ -29,9 +28,13 @@ openBtn.addEventListener('click', (e) => {
         errorElement.innerHTML = '';
         number.value = ''
         kod.value = ''
-        form.classList.replace('show','hide');
-        newItem.classList.replace('hide','show');
-        openBtn.classList.replace("show", "hide");
+        hideEl(form);
+        showEl(newItem);
+        hideEl(openBtn);
+        showEl(panelEnd);
+        showEl(thx);
+        clearInterval(interval);
+        thx.innerHTML = `Zrobiłeś to w czasie ${time} sekund! <br> Czy możemy zrobić dla Ciebie coś jeszcze?`;
     } else {
         errorElement.innerHTML = 'wprowadź poprawne dane'
         number.value = ''
@@ -40,27 +43,31 @@ openBtn.addEventListener('click', (e) => {
 })
 
 btnEnd.addEventListener('click', (e) => {
-    panelEnd.classList.replace('hide','show');
-    thx.classList.replace('hide','show');
-    newItem.classList.replace('show','hide');
-    gigaChadBtn.classList.replace('hide', 'show');
-    clearInterval(interval);
-    thx.innerHTML = `Dziękujemy za skorzystanie z naszych usług! &nbsp;&nbsp;&nbsp;&nbsp;Odebrałeś przesyłkę w ${time} sekund.`;
+
+    hideEl(newItem);
+    hideEl(panelEnd);
+    hideEl(thx);
+    showEl(pickupBtn)
+
 })
 
 btnNext.addEventListener('click', (e) => {
-    openBtn.classList.replace('hide', 'show');
-    form.classList.replace('hide','show');
-    newItem.classList.replace('show','hide');
+    showEl(openBtn);
+    showEl(form);
+    hideEl(newItem);
+    hideEl(thx);
+    
 })
 
-gigaChadBtn.addEventListener('click', (e)=>{
-    pickupBtn.classList.replace('hide','show');
-    form.classList.replace('show', 'hide');
-    gigaChadBtn.classList.replace('show','hide');
-    panelEnd.classList.replace('show','hide');
-})
 
 function increment() {
     time++;
+}
+
+function showEl(el){
+    el.classList.replace('hide','show');
+}
+
+function hideEl(el){
+    el.classList.replace('show','hide');
 }
