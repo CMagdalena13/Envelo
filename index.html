@@ -4,33 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@200;300;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Envelo</title>
 </head>
 
 <body>
-    <div class="panel">
-        <h1 class="panel__name">envelo</h1>
-        <p class="panel__text">Możesz mieć swoją przesyłkę w kilkanaście sekund. <br> Rozpocznij klikając w przycisk</p>
+    <div class="wrap">
+        <h1 class="name">envelo</h1>
+        <p class="text">Możesz mieć swoją przesyłkę w kilkanaście sekund. <br> Rozpocznij klikając w przycisk</p>
         <div id="error"></div>
         <form class="hide form">
-            <div class="form__container">
-                <label class="form__label" for="number">Numer telefonu:</label>
-                <input class="form__input" type="text" id="numer" autocomplete="off" maxlength="9" required>
+            <div class="form-container">
+                <label class="form-label" for="number">Numer telefonu:</label>
+                <input class="form-input" type="text" id="numer" autocomplete="off" maxlength="9" required>
             </div>
-            <div class="form__container">
-                <label class="form__label" for="number">Kod odbioru:</label>
-                <input class="form__input" type="text" id="kod" autocomplete="off" maxlength="4" required>
+            <div class="form-container">
+                <label class="form-label" for="number">Kod odbioru:</label>
+                <input class="form-input" type="text" id="kod" autocomplete="off" maxlength="4" required>
             </div>
         </form>
         <button id="pickup-btn"class="btn-red show">Odbierz przesyłkę</button>
         <button class=" btn-red hide" id="open-btn" >Otwórz skrytkę</button>
-        <div class=" hide panel__end ">
-            <div class="hide "id="thx"></div>  
+        <div class=" hide panel-end ">
+            <div class="hide text "id="thx"></div>  
         </div>
-        <div class="newItem hide">
-            <input class="newItem__next btn-red" type="submit" value="Odbierz kolejną paczkę">
-            <input class="newItem__end btn-red" type="submit" value="To wszystko na dziś">
+         <div class="newItem hide">
+            <input class="newItem-next btn-red" type="submit" value="Odbierz kolejną paczkę">
+            <input class="newItem-end btn-red" type="submit" value="To wszystko na dziś">
         </div>
         
     </div>

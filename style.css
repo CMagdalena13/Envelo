@@ -5,63 +5,71 @@
     font-family: sans-serif;
 }
 
-body {
-    background-color: #F2F2F2;
-    width: 100vw;
-    height: 100vh;
+:root{
+    --bgc-color: #f2f2f2;
+    --btn--color: #d52b1e;
 }
 
-.panel {
+body {
+    background-color: var(--bgc-color);
+    font-family: 'Spartan', sans-serif;
+}
+
+button{
+    color: white;
+}
+
+.wrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 0 2vh;
 }
 
-.panel__name {
+.name {
     font-size: 4rem;
     text-transform: uppercase;
-    color: #d52b1e;
+    color: var(--btn--color);
 }
 
-.panel__text {
+.text {
     text-align: center;
-    padding: 10vh 0;
+    padding: 3vh 0;
     line-height: 2rem;
 }
 
 .form.show{
     display: flex;
+    flex-direction: column;
 }
 
-.form__container {
+.form-container {
     display: flex;
     flex-direction: column;
     padding: 2vh;
 }
 
-.form__input {
+.form-input {
     padding: 2vh;
 }
 
-.form__label {
-    padding-bottom: 1vh;
+.form-label {
+    padding-bottom: 1.2vh;
 }
 
-.panel__end.show{
-    margin: 0 auto;
-    /* justify-content: center; */
-    /* display: flex; */
-    /* flex-direction: column; */
+.btn-red{
+    background-color: var(--btn--color);
+    border: none;
+    padding: 3vh 7vh;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
 }
 
-.newItem {
-    display: none;
-}
-
-.newItem input {
-    padding: 2vh;
+.newItem.show{
+    display: flex;
+    flex-direction: column;
 }
 
 .show {
@@ -72,21 +80,24 @@ body {
     display: none;
 }
 
-.btn-red{
-    background-color: #d52b1e;
-    border: none;
-    padding: 3vh 5vh;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    cursor: pointer;
-}
 .panel__end{
     display: flex;
     flex-direction: column;
 }
 
-/* .thx{
-    text-align: center;
-    padding-bottom: 5vh;
-} */
+.newItem input{
+    margin-bottom: 3vh;
+    color: white;
+}
 
+@media(orientation:landscape){
+    .form.show{
+        flex-direction: row;
+    }
+    .newItem.show{
+        flex-direction: row;
+    }
+    .newItem input{
+        margin: 0 3vh;
+    }
+}

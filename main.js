@@ -5,9 +5,9 @@ const number = document.getElementById("numer");
 const kod = document.getElementById("kod");
 const errorElement = document.getElementById('error');
 const newItem = document.querySelector('.newItem');
-const btnEnd = document.querySelector('.newItem__end');
-const btnNext = document.querySelector('.newItem__next');
-const panelEnd = document.querySelector('.panel__end');
+const btnEnd = document.querySelector('.newItem-end');
+const btnNext = document.querySelector('.newItem-next');
+const panelEnd = document.querySelector('.panel-end');
 const thx = document.getElementById('thx');
 
 let time = 0
@@ -43,12 +43,10 @@ openBtn.addEventListener('click', (e) => {
 })
 
 btnEnd.addEventListener('click', (e) => {
-
     hideEl(newItem);
     hideEl(panelEnd);
     hideEl(thx);
     showEl(pickupBtn)
-
 })
 
 btnNext.addEventListener('click', (e) => {
@@ -56,7 +54,6 @@ btnNext.addEventListener('click', (e) => {
     showEl(form);
     hideEl(newItem);
     hideEl(thx);
-    
 })
 
 
